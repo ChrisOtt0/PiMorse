@@ -9,6 +9,30 @@ class AlphabetConverter:
         self.gpio.setmode(GPIO.BCM)
         self.gpio.setup(port, GPIO.OUT)
 
+    def a(self):
+        self.dot()
+        self.inletter_space()
+        self.dash()
+        self.inletter_space()
+
+    def b(self):
+        self.dash()
+        self.inletter_space()
+        i = 0
+        while i < 3:
+            self.dot()
+            self.inletter_space()
+            i += 1
+
+    def c(self):
+        i = 0
+        while i < 2:
+            self.dash()
+            self.inletter_space()
+            self.dot()
+            self.inletter_space()
+            i += 1
+
     def o(self):
         i = 0
         while i < 3:
