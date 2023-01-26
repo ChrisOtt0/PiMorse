@@ -2,7 +2,7 @@ import modules.alphabetconverter as alphcon
 
 # Globals
 port = 18
-unit = 0.5
+unit = 0.25
 on = True
 off = False
 
