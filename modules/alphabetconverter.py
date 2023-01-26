@@ -123,6 +123,18 @@ class AlphabetConverter:
             self.dot()
         self.dash()
 
+    def y(self):
+        self.dash()
+        self.dot()
+        for _ in range(2):
+            self.dash()
+
+    def z(self):
+        for _ in range(2):
+            self.dash()
+        for _ in range(2):
+            self.dot()
+
     def dot(self):
         self.gpio.output(self.port, True)
         time.sleep(self.unit)
