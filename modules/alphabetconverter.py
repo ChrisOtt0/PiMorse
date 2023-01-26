@@ -11,100 +11,83 @@ class AlphabetConverter:
 
     def a(self):
         self.dot()
-        self.inletter_space()
         self.dash()
-        self.inletter_space()
 
     def b(self):
         self.dash()
-        self.inletter_space()
-        i = 0
-        while i < 3:
+        for _ in range(3):
             self.dot()
-            self.inletter_space()
-            i += 1
 
     def c(self):
-        i = 0
-        while i < 2:
+        for _ in range(2):
             self.dash()
-            self.inletter_space()
             self.dot()
-            self.inletter_space()
-            i += 1
 
     def d(self):
         self.dash()
-        self.inletter_space()
-        i = 0
-        while i < 2:
+        for _ in range(2):
             self.dot()
-            self.inletter_space()
-            i += 1
 
     def e(self):
         self.dot()
-        self.inletter_space()
 
     def f(self):
-        i = 0
-        while i < 2:
+        for _ in range(2):
             self.dot()
-            self.inletter_space()
-            i += 1
         self.dash()
-        self.inletter_space()
         self.dot()
-        self.inletter_space()
 
     def g(self):
-        i = 0
-        while i < 2:
+        for _ in range(2):
             self.dash()
-            self.inletter_space()
-            i += 1
         self.dot()
-        self.inletter_space()
 
     def h(self):
-        i = 0
-        while i < 4:
+        for _ in range(4):
             self.dot()
-            self.inletter_space()
-            i += 1
 
     def i(self):
-        i = 0
-        while i < 2:
+        for _ in range(2):
             self.dot()
-            self.inletter_space()
-            i += 1
+
+    def j(self):
+        self.dot()
+        for _ in range(3):
+            self.dash()
+
+    def k(self):
+        self.dash()
+        self.dot()
+        self.dash()
+
+    def l(self):
+        self.dot()
+        self.dash()
+        for _ in range(2):
+            self.dot()
 
     def o(self):
         i = 0
         while i < 3:
             self.dash()
-            self.inletter_space()
             i += 1
 
     def s(self):
         i = 0
         while i < 3:
             self.dot()
-            self.inletter_space()
             i += 1
 
     def dot(self):
         self.gpio.output(self.port, True)
         time.sleep(self.unit)
         self.gpio.output(self.port, False)
+        time.sleep(self.unit)
 
     def dash(self):
         self.gpio.output(self.port, True)
         time.sleep(3 * self.unit)
         self.gpio.output(self.port, False)
-
-    def inletter_space(self):
         time.sleep(self.unit)
 
     def letter_space(self):
