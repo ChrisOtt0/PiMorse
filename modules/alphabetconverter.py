@@ -33,6 +33,30 @@ class AlphabetConverter:
             self.inletter_space()
             i += 1
 
+    def d(self):
+        self.dash()
+        self.inletter_space()
+        i = 0
+        while i < 2:
+            self.dot()
+            self.inletter_space()
+            i += 1
+
+    def e(self):
+        self.dot()
+        self.inletter_space()
+
+    def f(self):
+        i = 0
+        while i < 2:
+            self.dot()
+            self.inletter_space()
+            i += 1
+        self.dash()
+        self.inletter_space()
+        self.dot()
+        self.inletter_space()
+
     def o(self):
         i = 0
         while i < 3:
