@@ -135,6 +135,58 @@ class AlphabetConverter:
         for _ in range(2):
             self.dot()
 
+    def one(self):
+        self.dot()
+        for _ in range(4):
+            self.dash()
+
+    def two(self):
+        for _ in range(2):
+            self.dot()
+        for _ in range(3):
+            self.dash()
+
+    def three(self):
+        for _ in range(3):
+            self.dot()
+        for _ in range(2):
+            self.dash()
+
+    def four(self):
+        for _ in range(4):
+            self.dot()
+        self.dash()
+
+    def five(self):
+        for _ in range(5):
+            self.dot()
+
+    def six(self):
+        self.dash()
+        for _ in range(4):
+            self.dot()
+
+    def seven(self):
+        for _ in range(2):
+            self.dash()
+        for _ in range(3):
+            self.dot()
+
+    def eight(self):
+        for _ in range(3):
+            self.dash()
+        for _ in range(2):
+            self.dot()
+
+    def nine(self):
+        for _ in range(4):
+            self.dash()
+        self.dot()
+
+    def zero(self):
+        for _ in range(5):
+            self.dash()
+
     def dot(self):
         self.gpio.output(self.port, True)
         time.sleep(self.unit)
