@@ -1,34 +1,43 @@
+import RPi.GPIO as GPIO
 import time
 
-def o(gpio, port, unit):
-    i = 0
-    while i < 3:
-        dash(gpio, port, unit)
-        inletter_space(unit)
-        i += 1
+class AlphabetConverter:
+    gpio = GPIO
+    def __init__(self, port, unit):
+        self.port = port
+        self.unit = unit
+        self.gpio.setmode(GPIO.BCM)
+        self.gpio.setup(port, GPIO.OUT)
 
-def s(gpio, port, unit):
-    i = 0
-    while i < 3:
-        dot(gpio, port, unit)
-        inletter_space(unit)
-        i += 1
+    def o(self):
+        i = 0
+        while i < 3:
+            self.dash()
+            self.inletter_space()
+            i += 1
 
-def dot(gpio, port, unit):
-    gpio.output(port, True)
-    time.sleep(unit)
-    gpio.output(port, False)
+    def s(self):
+        i = 0
+        while i < 3:
+            self.dot()
+            self.inletter_space()
+            i += 1
 
-def dash(gpio, port, unit):
-    gpio.output(port, True)
-    time.sleep(3 * unit)
-    gpio.output(port, False)
+    def dot(self):
+        self.gpio.output(self.port, True)
+        time.sleep(self.unit)
+        self.gpio.output(self.port, False)
 
-def inletter_space(unit):
-    time.sleep(unit)
+    def dash(self):
+        self.gpio.output(self.port, True)
+        time.sleep(3 * self.unit)
+        self.gpio.output(self.port, False)
 
-def letter_space(unit):
-    time.sleep(2 * unit)
+    def inletter_space(self):
+        time.sleep(self.unit)
 
-def word_space(unit):
-    time.sleep(6 * unit)
+    def letter_space(self):
+        time.sleep(2 * self.unit)
+
+    def word_space(self):
+        time.sleep(6 * self.unit)
