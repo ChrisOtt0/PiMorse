@@ -1,9 +1,16 @@
 import RPi.GPIO as GPIO
-import time
+import modules.alphabetconverter as ac
 
-GPIO.setmode(GPIO.BCM);
-GPIO.setup(18, GPIO.OUT);
+# Globals
+port = 18
+unit = 1
+on = True
+off = False
 
-GPIO.output(18, True);
-time.sleep(5);
-GPIO.output(18, False);
+# Setup GPIO
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(port, GPIO.OUT)
+
+ac.word_space(unit)
+
+ac.s(GPIO, port, unit)
