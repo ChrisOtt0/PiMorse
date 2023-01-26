@@ -12,25 +12,26 @@ while (True):
     com = raw_input("Input number: ")
     ac.word_space()
 
-    if com == "1":
-        ac.one()
-    elif com == "2":
-        ac.two()
-    elif com == "3":
-        ac.three()
-    elif com == "4":
-        ac.four()
-    elif com == "5":
-        ac.five()
-    elif com == "6":
-        ac.six()
-    elif com == "7":
-        ac.seven()
-    elif com == "8":
-        ac.eight()
-    elif com == "9":
-        ac.nine()
-    elif com == "0":
-        ac.zero()
-    else:
-        print("Unknown number.")
+    for x in com:
+        if x == "1":
+            ac.one()
+        elif x == "2":
+            ac.two()
+        elif x == "3":
+            ac.three()
+        elif x == "4":
+            ac.four()
+        elif x == "5":
+            ac.five()
+        elif x == "6":
+            ac.six()
+        elif x == "7":
+            ac.seven()
+        elif x == "8":
+            ac.eight()
+        elif x == "9":
+            ac.nine()
+        elif x == "0":
+            ac.zero()
+        else:
+            print("Unknown number.")
