@@ -99,6 +99,14 @@ class AlphabetConverter:
         for _ in range(3):
             self.dot()
 
+    def t(self):
+        self.dash()
+
+    def u(self):
+        for _ in range(2):
+            self.dot()
+        self.dash()
+
     def dot(self):
         self.gpio.output(self.port, True)
         time.sleep(self.unit)
