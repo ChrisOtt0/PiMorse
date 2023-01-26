@@ -9,7 +9,7 @@ off = False
 ac = alphcon.AlphabetConverter(port, unit)
 
 while (True):
-    com = input("Input number: ")
+    com = raw_input("Input number: ")
     ac.word_space()
 
     if com == "1":
