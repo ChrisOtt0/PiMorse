@@ -9,9 +9,9 @@ off = False
 ac = alphcon.AlphabetConverter(port, unit)
 
 ac.word_space()
-ac.d()
+ac.g()
 ac.inletter_space()
-ac.e()
+ac.h()
 ac.inletter_space()
-ac.f()
+ac.i()
 

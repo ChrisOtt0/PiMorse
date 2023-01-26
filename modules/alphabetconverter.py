@@ -57,6 +57,29 @@ class AlphabetConverter:
         self.dot()
         self.inletter_space()
 
+    def g(self):
+        i = 0
+        while i < 2:
+            self.dash()
+            self.inletter_space()
+            i += 1
+        self.dot()
+        self.inletter_space()
+
+    def h(self):
+        i = 0
+        while i < 4:
+            self.dot()
+            self.inletter_space()
+            i += 1
+
+    def i(self):
+        i = 0
+        while i < 2:
+            self.dot()
+            self.inletter_space()
+            i += 1
+
     def o(self):
         i = 0
         while i < 3:
