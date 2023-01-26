@@ -35,3 +35,4 @@ while (True):
             ac.zero()
         else:
             print("Unknown number.")
+        ac.letter_space()
