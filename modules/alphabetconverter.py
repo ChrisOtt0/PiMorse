@@ -66,17 +66,21 @@ class AlphabetConverter:
         for _ in range(2):
             self.dot()
 
-    def o(self):
-        i = 0
-        while i < 3:
+    def m(self):
+        for _ in range(2):
             self.dash()
-            i += 1
+
+    def n(self):
+        self.dash()
+        self.dot()
+
+    def o(self):
+        for _ in range(3):
+            self.dash()
 
     def s(self):
-        i = 0
-        while i < 3:
+        for _ in range(3):
             self.dot()
-            i += 1
 
     def dot(self):
         self.gpio.output(self.port, True)
