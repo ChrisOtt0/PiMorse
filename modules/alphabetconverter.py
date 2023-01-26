@@ -78,6 +78,23 @@ class AlphabetConverter:
         for _ in range(3):
             self.dash()
 
+    def p(self):
+        self.dot()
+        for _ in range(2):
+            self.dash()
+        self.dot()
+
+    def q(self):
+        for _ in range(2):
+            self.dash()
+        self.dot()
+        self.dash()
+
+    def r(self):
+        self.dot()
+        self.dash()
+        self.dot()
+
     def s(self):
         for _ in range(3):
             self.dot()
