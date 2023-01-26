@@ -12,6 +12,7 @@ def s(gpio, port, unit):
     while i < 3:
         dot(gpio, port, unit)
         inletter_space(unit)
+        i += 1
 
 def dot(gpio, port, unit):
     gpio.output(port, True)
